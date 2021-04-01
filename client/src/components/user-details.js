@@ -1,8 +1,21 @@
 import React from "react";
-import "../css/user-details.css";
+import { useForm, ErrorMessage } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../updateAction";
+import "../css/styles.css";
 
-const UserDetails = ({ setForm, formData, navigation }) => {
-  const { firstName, lastName, address,city,zip,country,email,phone } = formData;
+const UserDetails = () => {
+    const { state, action } = useStateMachine(updateAction);
+    const { handleSubmit, errors, register } = useForm({
+      defaultValues: state.yourDetails
+    });
+    const { push } = useHistory();
+    const onSubmit = data => {
+      action(data);
+      push("/step1");
+    };
+  
   return (
     <>
     <div class="user">
@@ -12,7 +25,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
       </h1>
     </div>
 
-    <form>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div class=" container">
         <div class="row">
           <div class="col-sm">
@@ -21,9 +34,8 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 type="text"
                 class="form-control"
                 placeholder="First Name"
-                value={firstName}
                 name="firstName"
-                onChange={setForm}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -35,8 +47,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="Last name"
                 name="lastName"
-                onChange={setForm}
-                value={lastName}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -50,8 +61,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="Address"
                 name="address"
-                value={address}
-                onChange={setForm}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -65,8 +75,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="City"
                 name="city"
-                onChange={setForm}
-                value={city}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -78,8 +87,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="Zip Code"
                 name="zip"
-                onChange={setForm}
-                value={zip}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -91,8 +99,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="Country"
                 name="country"
-                onChange={setForm}
-                value={country}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -106,8 +113,7 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="email"
                 name="email"
-                onChange={setForm}                
-                value={email}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
@@ -119,14 +125,13 @@ const UserDetails = ({ setForm, formData, navigation }) => {
                 class="form-control"
                 placeholder="Phone No"
                 name="phone"
-                onChange={setForm}                
-                value={phone}
+                ref={register()}
                 aria-describedby="addon-wrapping"
               />
             </div>
           </div>
         </div>
-      <input class="btn-bottom-right" onClick={()=> navigation.next()} type="submit" value="Next" />
+      <input class="btn-bottom-right" type="submit" value="Next" />
       </div>
     </form>
     </div>
