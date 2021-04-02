@@ -99,20 +99,6 @@ const Step2 = (props) => {
                       />
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="input-group flex-nowrap">
-                      <input
-                        type="date"
-                        class="form-control"
-                        placeholder="Start Month"
-                        name={`${fieldName}.smonth`}
-                        ref={register}
-                        aria-describedby="addon-wrapping"
-                      />
-                    </div>
-                  </div>
                   <div class="col-sm">
                     <div class="input-group flex-nowrap">
                       <input

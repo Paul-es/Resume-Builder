@@ -13,14 +13,15 @@ const Download = () => {
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
-    axios
-    .post("http://127.0.0.1:5000/details", state.yourDetails)
-    .then((res) => {
-      console.log(res.data);
-    })
     if (clicked) {
       // do something meaningful, Promises, if/else, whatever, and then
       window.location.assign('http://127.0.0.1:5000/get-pdf');
+      axios
+      .post("http://127.0.0.1:5000/details", state.yourDetails)
+      .then((res) => {
+        console.log(res.data);
+        window.location.reload(); 
+      })
     }
 })
 
