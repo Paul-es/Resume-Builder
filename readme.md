@@ -12,3 +12,8 @@ The Client side is developed using React.js and the server side using Flask
 
 1.   Install requirements.txt file: `pip install -r requirements.txt`
 2.   To run: `python3 main.py`
+
+<h3>--> Change the the path to load pdf </h3>
+
+Change the path of the pdf to load with your local path i.e the location where you saved the project
+
