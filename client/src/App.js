@@ -26,8 +26,6 @@ createStore({
     zip: "",
     email: "",
     phone: "",
-    age: "",
-    yearsOfExp: ""
   }
 });
 

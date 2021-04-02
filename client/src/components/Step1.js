@@ -104,8 +104,8 @@ const Step1 = (props) => {
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Month"
-                        name={`${fieldName}.month`}
+                        placeholder="Start Year"
+                        name={`${fieldName}.syear`}
                         ref={register}
                         aria-describedby="addon-wrapping"
                       />
@@ -116,8 +116,8 @@ const Step1 = (props) => {
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Year"
-                        name={`${fieldName}.year`}
+                        placeholder="End Year"
+                        name={`${fieldName}.eyear`}
                         ref={register}
                         aria-describedby="addon-wrapping"
                       />
