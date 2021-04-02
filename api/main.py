@@ -26,7 +26,7 @@ def query_records():
 
 @app.route('/get-pdf',methods = ['GET'])
 def get_csv():
-    return send_from_directory("/home/paules/Documents/cv-builder/api", "resume.pdf", as_attachment=True)
+    return send_from_directory("/home/paules/Desktop/cv-builder/api", "resume.pdf", as_attachment=True)
 
 def pdf_generate(data):
     pdf = FPDF()
