@@ -56,14 +56,14 @@ def pdf_generate(data):
     pdf.cell(30, 30, ln=1 ,txt='EDUCATION', align='C')
 
     for i in data['education']:
-        pdf.cell(140,0,txt=i['institution']+", "+i['location'],ln=1, align='L')
+        pdf.cell(140,0,txt="> "+i['institution']+", "+i['location'],ln=1, align='L')
         pdf.cell(110,20,txt=i['degree']+". "+i['field'],ln=1, align='L')
         pdf.cell(35,0,txt=i['syear']+"-"+i['eyear'],ln=1, align='L')
         pdf.cell(0, 20, ln=1, align='C')
 
     pdf.cell(30, 25, ln=1 ,txt='EXPERIENCE', align='C')
     for i in data['experience']:
-        pdf.cell(80,10,txt=i['job'],ln=1, align='L')
+        pdf.cell(80,10,txt="> "+i['job'],ln=1, align='L')
         pdf.cell(80,10,txt=i['company']+" | "+i['syear'],ln=1, align='L')
         pdf.cell(80,10,txt=i['country']+", "+i['state'],ln=1, align='L')
 
