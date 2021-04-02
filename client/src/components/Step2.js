@@ -119,7 +119,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Start Year"
-                        name={`${fieldName}.Start Year`}
+                        name={`${fieldName}.syear`}
                         ref={register}
                         aria-describedby="addon-wrapping"
                       />
