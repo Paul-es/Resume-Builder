@@ -38,20 +38,20 @@ def pdf_generate(data):
     pdf.cell(100, 10, ln=1, align='C')
     pdf.cell(30, 30, ln=1 ,txt='CONTACT', align='C')
 
-    pdf.cell(30,txt='Phone:', align='C')
-    pdf.cell(30,0,txt=data['phone'],ln=1 ,align='C')
+    pdf.cell(30,txt='Phone:', align='L')
+    pdf.cell(30,0,txt=data['phone'],ln=1 ,align='L')
 
-    pdf.cell(30,20,txt='Address:', align='C')
-    pdf.cell(120,20,txt=data['address'],ln=1 ,align='C')
+    pdf.cell(30,20,txt='Address:', align='L')
+    pdf.cell(120,20,txt=data['address'],ln=1 ,align='L')
 
-    pdf.cell(25,0,txt='email:', align='C')
-    pdf.cell(60,0,txt=data['email'],ln=1 ,align='C')
+    pdf.cell(25,0,txt='email:', align='L')
+    pdf.cell(60,0,txt=data['email'],ln=1 ,align='L')
 
-    pdf.cell(30,20,txt='Country:', align='C')
-    pdf.cell(10,20,txt=data['country'],ln=1 ,align='C')
+    pdf.cell(30,20,txt='Country:', align='L')
+    pdf.cell(10,20,txt=data['country'],ln=1 ,align='L')
 
-    pdf.cell(55,0,txt='City:'+" "+data['city'],ln=1, align='C')
-    pdf.cell(38,20,txt='Zip:'+" "+data['zip'],ln=1, align='C')
+    pdf.cell(55,0,txt='City:'+" "+data['city'],ln=1, align='L')
+    pdf.cell(38,20,txt='Zip:'+" "+data['zip'],ln=1, align='L')
 
     pdf.cell(30, 30, ln=1 ,txt='EDUCATION', align='C')
 
