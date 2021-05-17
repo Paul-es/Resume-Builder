@@ -77,6 +77,7 @@ const Skills = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Skills"
+                        required
                         name={`${fieldName}.skill`}
                         ref={register}
                         aria-describedby="addon-wrapping"

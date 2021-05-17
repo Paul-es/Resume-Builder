@@ -53,6 +53,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Institute Name"
+                        required
                         name={`${fieldName}.institution`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -65,6 +66,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Location"
+                        required
                         name={`${fieldName}.location`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -79,6 +81,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Degree"
+                        required
                         name={`${fieldName}.degree`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -93,6 +96,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Field of Study"
+                        required
                         name={`${fieldName}.field`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -105,6 +109,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Start Year"
+                        required
                         name={`${fieldName}.syear`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -117,6 +122,7 @@ const Step1 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="End Year"
+                        required
                         name={`${fieldName}.eyear`}
                         ref={register}
                         aria-describedby="addon-wrapping"

@@ -35,6 +35,7 @@ const UserDetails = () => {
                 class="form-control"
                 placeholder="First Name"
                 name="firstName"
+                required
                 ref={register()}
                 aria-describedby="addon-wrapping"
               />
@@ -45,6 +46,7 @@ const UserDetails = () => {
               <input
                 type="text"
                 class="form-control"
+                required
                 placeholder="Last name"
                 name="lastName"
                 ref={register()}
@@ -60,6 +62,7 @@ const UserDetails = () => {
                 type="text"
                 class="form-control"
                 placeholder="Address"
+                required
                 name="address"
                 ref={register()}
                 aria-describedby="addon-wrapping"
@@ -73,6 +76,7 @@ const UserDetails = () => {
               <input
                 type="text"
                 class="form-control"
+                required
                 placeholder="City"
                 name="city"
                 ref={register()}
@@ -86,6 +90,7 @@ const UserDetails = () => {
                 type="text"
                 class="form-control"
                 placeholder="Zip Code"
+                required
                 name="zip"
                 ref={register()}
                 aria-describedby="addon-wrapping"
@@ -98,6 +103,7 @@ const UserDetails = () => {
                 type="text"
                 class="form-control"
                 placeholder="Country"
+                required
                 name="country"
                 ref={register()}
                 aria-describedby="addon-wrapping"
@@ -112,6 +118,7 @@ const UserDetails = () => {
                 type="text"
                 class="form-control"
                 placeholder="email"
+                required
                 name="email"
                 ref={register()}
                 aria-describedby="addon-wrapping"
@@ -124,6 +131,7 @@ const UserDetails = () => {
                 type="text"
                 class="form-control"
                 placeholder="Phone No"
+                required
                 name="phone"
                 ref={register()}
                 aria-describedby="addon-wrapping"

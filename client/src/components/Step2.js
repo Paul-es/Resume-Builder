@@ -53,6 +53,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Job Title"
+                        required
                         name={`${fieldName}.job`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -67,6 +68,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Company"
+                        required
                         name={`${fieldName}.company`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -81,6 +83,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Country"
+                        required
                         name={`${fieldName}.country`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -93,6 +96,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="State"
+                        required
                         name={`${fieldName}.state`}
                         ref={register}
                         aria-describedby="addon-wrapping"
@@ -105,6 +109,7 @@ const Step2 = (props) => {
                         type="text"
                         class="form-control"
                         placeholder="Start Year"
+                        required
                         name={`${fieldName}.syear`}
                         ref={register}
                         aria-describedby="addon-wrapping"
