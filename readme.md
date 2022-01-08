@@ -2,7 +2,7 @@
 The Client side is developed using React.js and the server side using Flask
 
 <h1>Demo</h1>
-[CV Builder demo video](https://drive.google.com/file/d/1uItNIWdr40AbqAh2k__LRov3txB0EjC5/view?usp=sharing)
+https://cv-build.netlify.app/
 <h1>Instructions to run the Project</h1>
 
 <h2>To run Client (React App):</h2>
